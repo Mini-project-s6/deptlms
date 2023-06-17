@@ -75,7 +75,16 @@
     #logo{
         height: 73px;
     }
-        
+    .menu-section {
+        background-color: #cf2e2e;
+        border:none;
+    }
+    #menu-top a{
+        color:white;
+    }
+    #menu-top a:hover{
+        color:black;
+    }    
     </style>
 
     <?php } ?>

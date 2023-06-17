@@ -63,6 +63,9 @@ body {
     /* border-bottom:5px solid #9170E4; */
     width:100%
 }
+#logo{
+    height: 73px;
+}
 .menu-top-active {
     background-color:#eeeeee;
 }
