@@ -16,7 +16,7 @@
 {
 ?> 
             <div class="right-div">
-                <a href="logout.php" class="btn btn-danger pull-right">LOG ME OUT</a>
+                <a href="logout.php" class="btn btn-danger pull-right">LOG  OUT</a>
             </div>
             <?php }?>
         </div>
@@ -42,7 +42,7 @@
                                 </ul>
                             </li>
                             <li><a href="issued-books.php">Issued Books</a></li>
-                          
+                          <li><a href="search-books.php"> Search Books</li>
 
                         </ul>
                     </div>
