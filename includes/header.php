@@ -8,7 +8,7 @@
                 </button>
                 <a class="navbar-brand" >
 
-                    <img src="assets/img/logo.png" />
+                    <img id="logo" src="assets/img/logo.jpeg" />
                 </a>
 
             </div>
@@ -71,5 +71,11 @@
             </div>
         </div>
     </section>
+    <style>
+    #logo{
+        height: 73px;
+    }
+        
+    </style>
 
     <?php } ?>
