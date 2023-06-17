@@ -8,7 +8,7 @@
                 </button>
                 <a class="navbar-brand">
 
-                    <img src="assets/img/logo.jpeg" />
+                    <img id="logo1" src="assets/img/logo.jpeg" />
                 </a>
 
             </div>
@@ -25,7 +25,7 @@
                 <div class="col-md-12">
                     <div class="navbar-collapse collapse ">
                         <ul id="menu-top" class="nav navbar-nav navbar-right">
-                            <li><a href="dashboard.php" class="menu-top-active">DASHBOARD</a></li>
+                            <li><a href="dashboard.php" class="menu-top-active menu-section">DASHBOARD</a></li>
                            
                             <li>
                                 <a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown"> Categories <i class="fa fa-angle-down"></i></a>
@@ -66,3 +66,18 @@
             </div>
         </div>
     </section>
+    <style>
+        #logo1{
+            height: 73px;
+        }
+        .menu-section {
+            background-color: #cf2e2e;
+            border:none;
+        }
+        #menu-top a{
+            color:white;
+        }
+        #menu-top a:hover{
+            color:black;
+        }    
+    </style>
