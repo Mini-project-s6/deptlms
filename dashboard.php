@@ -57,17 +57,23 @@ if (strlen($_SESSION['login']) == 0) {
                     <div class="alert alert-warning back-widget-set text-center">
                         <i class="fa fa-recycle fa-5x"></i>
                         <?php 
-                        $rsts = null;
-                        $sql2 = "SELECT id FROM tblissuedbookdetails WHERE StudentID = :sid AND RetrunStatus is NULL";
+                        $rsts = 1;
+                        $sql2 = "SELECT id FROM tblissuedbookdetails WHERE StudentID = :sid AND RetrunStatus = :rsts";
                         $query2 = $dbh->prepare($sql2);
                         $query2->bindParam(':sid', $sid, PDO::PARAM_STR);
-                        # $query2->bindParam(':rsts', $rsts, PDO::PARAM_STR);
+                        $query2->bindParam(':rsts', $rsts, PDO::PARAM_STR);
                         $query2->execute();
-                        $row2 = $query2->fetch(PDO::FETCH_ASSOC);
-                       # $returnedbooks = $query2->rowCount();
-                       $notReturnedBooks = $row2['notReturned'];
+                        $returnedbooks = $query2->rowCount();
                         ?>
-                        <h3><?php echo htmlentities($notReturnedBooks);?></h3>
+                         <?php 
+                        $sid = $_SESSION['stdid'];
+                        $sql1 = "SELECT id FROM tblissuedbookdetails WHERE StudentID = :sid";
+                        $query1 = $dbh->prepare($sql1);
+                        $query1->bindParam(':sid', $sid, PDO::PARAM_STR);
+                        $query1->execute();
+                        $issuedbooks = $query1->rowCount();
+                        ?>
+                        <h3><?php echo htmlentities($issuedbooks-$returnedbooks);?></h3>
                         Books Not Returned Yet
                     </div>
                 </div>
