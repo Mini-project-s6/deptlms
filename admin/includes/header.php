@@ -80,4 +80,11 @@
         #menu-top a:hover{
             color:black;
         }    
+        .dropdown-menu li a {
+            color: black !important;
+        }
+        .dropdown-menu li a:hover {
+            background-color: #CF2E2E;
+            color: white !important;
+        }
     </style>
