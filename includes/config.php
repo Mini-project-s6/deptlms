@@ -2,8 +2,8 @@
 // DB credentials.
 define('DB_HOST','localhost');
 define('DB_USER','root');
-define('DB_PASS','12345');
-define('DB_NAME','library');
+define('DB_PASS','Fathima123@');
+define('DB_NAME','library1');
 // Establish database connection.
 try
 {
