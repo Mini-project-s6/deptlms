@@ -1,16 +1,4 @@
-﻿
-/*=============================================================
-    Authour URI: www.binarytheme.com
-    License: Commons Attribution 3.0
-
-    http://creativecommons.org/licenses/by/3.0/
-
-    100% Free To use For Personal And Commercial Use.
-    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
-   
-    ========================================================  */
-
-(function ($) {
+﻿(function ($) {
     "use strict";
     var mainApp = {
         slide_fun: function () {
