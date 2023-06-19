@@ -42,7 +42,7 @@
                                 </ul>
                             </li>
                             <li><a href="issued-books.php">Issued Books</a></li>
-                          <li><a href="search-books.php"> Search Books</li>
+                          <li><a href="search-books.php"> Search Books</a></li>
 
                         </ul>
                     </div>
