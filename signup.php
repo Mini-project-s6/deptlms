@@ -10,14 +10,14 @@ if ($_POST["vercode"] != $_SESSION["vercode"] OR $_SESSION["vercode"]=='')  {
     } 
         else {    
 //Code for student ID
-// $count_my_page = ("studentid.txt");
-// $hits = file($count_my_page);
-// $hits[0] ++;
-// $fp = fopen($count_my_page , "w");
-// fputs($fp , "$hits[0]");
-// fclose($fp); 
-$StudentId= $_POST['SID'];   
-$fname=$_POST['fullname'];
+$count_my_page = ("studentid.txt");
+$hits = file($count_my_page);
+$hits[0] ++;
+$fp = fopen($count_my_page , "w");
+fputs($fp , "$hits[0]");
+fclose($fp); 
+$StudentId= $hits[0];   
+$fname=$_POST['fullanme'];
 $mobileno=$_POST['mobileno'];
 $email=$_POST['email']; 
 $password=md5($_POST['password']); 
@@ -116,13 +116,9 @@ error:function (){}
                             <form name="signup" method="post" onSubmit="return valid();">
 <div class="form-group">
 <label>Enter Full Name</label>
-<input class="form-control" type="text" name="fullname" autocomplete="off" required />
+<input class="form-control" type="text" name="fullanme" autocomplete="off" required />
 </div>
 
-<div class="form-group">
-<label>Student ID :</label>
-<input class="form-control" type="text" name="SID" maxlength="7" autocomplete="off" required />
-</div>
 
 <div class="form-group">
 <label>Mobile Number :</label>
