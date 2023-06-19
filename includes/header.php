@@ -31,7 +31,7 @@
                 <div class="col-md-12">
                     <div class="navbar-collapse collapse ">
                         <ul id="menu-top" class="nav navbar-nav navbar-right">
-                            <li><a href="dashboard.php" class="menu-top-active dashboard-menu">DASHBOARD</a></li>
+                            <li id="dashboard"><a href="dashboard.php" class="menu-top-active">DASHBOARD</a></li>
                            
                           
    <li>
@@ -42,7 +42,7 @@
                                 </ul>
                             </li>
                             <li><a href="issued-books.php">Issued Books</a></li>
-                          <li><a href="search-books.php"> Search Books</li>
+                          <li><a href="search-books.php"> Search Books</a></li>
 
                         </ul>
                     </div>
@@ -85,6 +85,7 @@
     #menu-top a:hover{
         color:black;
     }
+
     </style>
 
     <?php } ?>
