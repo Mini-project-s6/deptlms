@@ -56,7 +56,8 @@ if (strlen($_SESSION['login']) == 0) {
                 if (isset($_GET['search'])) {
                     $search = trim($_GET['search']);
                     if (!empty($search)) {
-                        $sql = "SELECT * FROM tblbooks WHERE BookName LIKE :search ";
+                        // $sql = "SELECT * FROM tblbooks WHERE BookName LIKE :search ";
+                        $sql="SELECT b.BookName, a.AuthorName, c.CategoryName, b.ISBNNumber FROM tblbooks b JOIN tblauthors a ON b.AuthorId = a.id JOIN tblcategory c ON b.CatId = c.id WHERE b.BookName LIKE :search;";
                         $query = $dbh->prepare($sql);
                         $query->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
                         $query->execute();
@@ -69,8 +70,8 @@ if (strlen($_SESSION['login']) == 0) {
                                 echo "<div class='panel panel-default'>";
                                 echo "<div class='panel-heading'>" . $result['BookName'] . "</div>";
                                 echo "<div class='panel-body'>";
-                                echo "<p>Author: " . $result['Author'] . "</p>";
-                                echo "<p>Category: " . $result['Category'] . "</p>";
+                                echo "<p>Author: " . $result['AuthorName'] . "</p>";
+                                echo "<p>Category: " . $result['CategoryName'] . "</p>";
                                 echo "<p>ISBN: " . $result['ISBNNumber'] . "</p>";
                                 echo "</div>";
                                 echo "</div>";
