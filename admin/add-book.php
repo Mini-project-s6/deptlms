@@ -14,14 +14,14 @@ $bookname=$_POST['bookname'];
 $category=$_POST['category'];
 $author=$_POST['author'];
 $isbn=$_POST['isbn'];
-$price=$_POST['price'];
-$sql="INSERT INTO  tblbooks(BookName,CatId,AuthorId,ISBNNumber,BookPrice) VALUES(:bookname,:category,:author,:isbn,:price)";
+$price=$_POST['count'];
+$sql="INSERT INTO  tblbooks(BookName,CatId,AuthorId,ISBNNumber,BookCount) VALUES(:bookname,:category,:author,:isbn,:count)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':bookname',$bookname,PDO::PARAM_STR);
 $query->bindParam(':category',$category,PDO::PARAM_STR);
 $query->bindParam(':author',$author,PDO::PARAM_STR);
 $query->bindParam(':isbn',$isbn,PDO::PARAM_STR);
-$query->bindParam(':price',$price,PDO::PARAM_STR);
+$query->bindParam(':count',$count,PDO::PARAM_STR);
 $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
@@ -127,11 +127,11 @@ foreach($results as $result)
 <div class="form-group">
 <label>ISBN Number<span style="color:red;">*</span></label>
 <input class="form-control" type="text" name="isbn"  required="required" autocomplete="off"  />
-<p class="help-block">An ISBN is an International Standard Book Number.ISBN Must be unique</p>
+<p class="help-block">ISBN Must be unique</p>
 </div>
 
  <div class="form-group">
- <label>Price<span style="color:red;">*</span></label>
+ <label>Count<span style="color:red;">*</span></label>
  <input class="form-control" type="text" name="price" autocomplete="off"   required="required" />
  </div>
 <button type="submit" name="add" class="btn btn-info">Add </button>
