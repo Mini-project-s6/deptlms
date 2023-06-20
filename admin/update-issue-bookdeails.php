@@ -20,6 +20,18 @@ $query->bindParam(':fine',$fine,PDO::PARAM_STR);
 $query->bindParam(':rstatus',$rstatus,PDO::PARAM_STR);
 $query->execute();
 
+$sql = "SELECT BookId FROM tblissuedbookdetails WHERE id = :rid";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':rid', $rid, PDO::PARAM_STR);
+    $query->execute();
+    $row = $query->fetch(PDO::FETCH_ASSOC);
+    $bookId = $row['BookId'];
+
+    // Increment BookCount by one
+    $sql = "UPDATE tblbooks SET BookCount = BookCount + 1 WHERE id = :bookId";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':bookId', $bookId, PDO::PARAM_INT);
+    $query->execute();
 $_SESSION['msg']="Book Returned successfully";
 header('location:manage-issued-books.php');
 
