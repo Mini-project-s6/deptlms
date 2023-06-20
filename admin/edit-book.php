@@ -145,7 +145,7 @@ continue;
 <div class="form-group">
 <label>ISBN Number<span style="color:red;">*</span></label>
 <input class="form-control" type="text" name="isbn" value="<?php echo htmlentities($result->ISBNNumber);?>"  required="required" />
-<p class="help-block">An ISBN is an International Standard Book Number.ISBN Must be unique</p>
+<p class="help-block">ISBN Must be unique</p>
 </div>
 
  <div class="form-group">
