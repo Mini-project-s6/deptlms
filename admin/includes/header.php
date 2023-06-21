@@ -15,6 +15,7 @@
 
             <div class="right-div">
                 <a href="logout.php" class="btn btn-danger pull-right">LOG OUT</a>
+                <a href="send-alert.php" class="btn btn-primary pull-right">Send Alert</a>
             </div>
         </div>
     </div>
@@ -57,6 +58,7 @@
                                 </ul>
                             </li>
                              <li><a href="reg-students.php">Reg Students</a></li>
+
                     
   <li><a href="change-password.php">Change Password</a></li>
                         </ul>
@@ -86,5 +88,8 @@
         .dropdown-menu li a:hover {
             background-color: #CF2E2E;
             color: white !important;
+        }
+        .btn-primary{
+            margin-right:10px;
         }
     </style>
