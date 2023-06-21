@@ -21,7 +21,7 @@ foreach ($overdueBooks as $book) {
     $message = "Dear Student,\n\nThis is a reminder that the due date for returning the book (Book ID: $bookID) has passed. Please return the book to the library as soon as possible.";
 
     // Send the email
-    $headers = "From: anilabiju30@gmail.com"; // Replace with your email address
+    $headers = "From: ananshamsudheen3011@gmail.com"; // Replace with your email address
     if (mail($email, $subject, $message, $headers)) {
         echo "Email alert sent to Student ID: $studentID<br>";
     } else {
