@@ -5,7 +5,7 @@ include('includes/config.php');
 $sql = "SELECT ibd.StudentID, ibd.BookId, s.EmailId
         FROM tblissuedbookdetails ibd
         INNER JOIN tblstudents s ON ibd.StudentID = s.StudentID
-        WHERE ibd.Due_date <= CURDATE()";
+        WHERE ibd.Due_date <= CURDATE() AND ibd.RetrunStatus is NULL";
 $query = $dbh->prepare($sql);
 $query->execute();
 $overdueBooks = $query->fetchAll(PDO::FETCH_ASSOC);
